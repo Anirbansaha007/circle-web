@@ -1,0 +1,372 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    font-family: sans-serif;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* header */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+
+    /* it just reverse the order of the items */
+    /* flex-direction: row-reverse; */
+    /* align-items: flex-end; */
+}
+
+nav .logo{
+    padding: 10px 20px;
+    /* order: 1; */
+    flex: 1;
+}
+
+nav .current{
+    background-color:  #ff6600;
+}
+nav .current a{
+    color: white;
+}
+
+.all_items{
+    display:flex;
+    order: 3;
+}
+
+nav .item{
+    padding: 50px 10px 10px 10px;
+    /* order: 3; */
+}
+nav #item6{
+    padding-right: 25px;
+}
+
+nav .icon{
+    padding: 1rem;
+    font-size: 2.5rem;
+    display: none;
+}
+
+
+/*  */
+.carousel-indicators .active{
+    background-color: #ff6600;
+}
+.carousel-indicators li{
+    height: 5px;
+    width: 40px;
+    margin: 5px;
+}
+
+/* service_details */
+.service_details .title{
+    font-size: 2rem;
+    color:  #ff6600;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.service_details .intro{
+    text-align: center;
+    max-width: 800px;
+    padding: 0px 20px;
+    margin:auto;
+}
+
+.service_container{
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+
+.service_container .item{
+    max-width: 225px;
+    padding: 10px;
+}
+
+.service_container .logo{
+    border-radius: 15px;
+    background-color:  #ff6600;
+    padding: 10px;
+    height:70px;
+    width:70px;
+    margin: auto;
+}
+
+.service_container .description{
+    text-align: center;
+}
+
+.service_container #btn1, #btn2, #btn3, #btn4{
+    background-color: lightgrey;
+    border: none;
+    cursor: pointer;
+
+    padding: 10px 20px;
+    font-size: 16px;
+
+    margin: auto;
+    display: block;
+}
+
+
+#more1, #more2, #more3, #more4{
+    display: none;
+}
+
+
+/* project showcase */
+.project_gallery{
+    padding: 20px;
+}
+
+.project_gallery .title{
+    font-size: 2rem;
+    color:  #ff6600;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+/* using grid - not done */
+/* .project_gallery .container{
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    display: grid;
+} */
+/* using grid - not done */
+
+/* using flex */
+.project_gallery .container{
+    padding: 10px 0px;
+}
+
+.project_gallery .row1{
+    display: flex;
+}
+
+.project_gallery .row2{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.project_gallery .item{
+    width: 25%;
+}
+/* using flex */
+
+.project_gallery img{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* services */
+.services {
+    /* position: absolute; */
+    /* top: 0; */
+    background:
+        linear-gradient(
+        rgba(145, 45, 195, 0.4),
+        rgba(145, 45, 195, 0.4)
+        ),
+        url(img/beach_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    padding: 0px 50px;
+    justify-content: center;
+}
+
+.services img {
+    width: 30%;
+    max-width: 300px;
+    padding: 0px 30px;
+}
+
+.services .content {
+    padding: 10px;
+    color: white;
+    max-width: 900px;
+}
+
+.services .title {
+    font-size: 1.5rem;
+    display: inline-block;
+    /* inline-block instead inline necessary for padding, margin */
+    border-bottom: 3px dashed #ff6600;
+    margin:10px 0px 20px 0px;
+}
+
+/* feedback */
+.feedback{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.testimonial{
+    padding: 20px;
+    width: 70%;
+}
+
+.events_details{
+    padding: 20px 10px 60px 10px;
+    width: 30%;
+}
+
+.feedback .title {
+    font-size: 1.5rem;
+    color:  #ff6600;
+    padding: 10px;
+
+}
+
+.feedback .description {
+    padding: 10px;
+}
+
+.feedback img{
+    border-radius: 50%;
+}
+
+.feedback .details{
+    display: flex;
+}
+
+/* footer */
+footer{
+    background-color:  #ff6600;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+
+
+@media screen and (max-width: 768px){
+    html {
+        font-size: 14px;
+    }
+
+    /* header */
+    nav .item{
+        display: none;
+        padding: 10px;
+    }
+    nav #item6{
+        padding-right: 10px;
+    }
+    nav .icon{
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+    /* .topnav.responsive .icon {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+    } */
+
+    .all_items{
+        position: absolute;
+        top: 87px;
+        width: 100%;
+        flex-direction: column;
+        z-index: 16;
+        /* to override indicator of carousel */
+    }
+
+    .topnav.responsive .item {
+      text-align: center;
+      display: block;
+      width: 100%;
+      background: black;
+    }
+
+    .topnav.responsive .item a{
+        color: white;
+    }
+
+
+
+    /* service_details */
+    .service_container{
+        flex-wrap: wrap;
+        margin: 0px;
+    }
+
+    .service_container .item{
+        max-width: 500px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    /* project showcase */
+    .project_gallery .row1, .project_gallery .row2{
+        flex-wrap: wrap;
+    }
+
+    .project_gallery .item{
+        width: 100%;
+        /* height: 200px; */
+    }
+
+    /* services */
+    .services img {
+        width: 250px;
+    }
+
+    .services{
+        flex-wrap: wrap;
+    }
+
+    .services .content, .services .title{
+        text-align: center;
+    }
+
+
+    /* feedback */
+    .testimonial, .events_details{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .feedback .details{
+        display: block;
+    }
+
+    .feedback .title, .feedback  .description {
+        padding: 10px 40px;
+        text-align: center;
+    }
+
+    .feedback img {
+        margin: auto;
+        display: block;
+    }
+
+
+}
+
+
+
+
+
+
+
+
