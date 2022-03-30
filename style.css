@@ -7,12 +7,15 @@ body{
     font-family: sans-serif;
 }
 
-a, a:hover{
+a{
     text-decoration: none;
     color: black;
 }
 
-
+a:hover{
+    text-decoration: none;
+    color: #ff6600;
+}
 
 /* header */
 nav{
@@ -37,9 +40,9 @@ nav .current a{
     color: white;
 }
 
-.all_items{
+nav .all_items{
     display:flex;
-    order: 3;
+    /* order: 3; */
 }
 
 nav .item{
@@ -57,7 +60,7 @@ nav .icon{
 }
 
 
-/*  */
+/* carousel */
 .carousel-indicators .active{
     background-color: #ff6600;
 }
@@ -183,7 +186,7 @@ nav .icon{
         rgba(145, 45, 195, 0.4),
         rgba(145, 45, 195, 0.4)
         ),
-        url(img/beach_bg.jpg);
+        url(img/beach_bg1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -200,7 +203,7 @@ nav .icon{
 .services .content {
     padding: 10px;
     color: white;
-    max-width: 900px;
+    max-width: 800px;
 }
 
 .services .title {
@@ -215,6 +218,8 @@ nav .icon{
 .feedback{
     display: flex;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .testimonial{
@@ -231,7 +236,6 @@ nav .icon{
     font-size: 1.5rem;
     color:  #ff6600;
     padding: 10px;
-
 }
 
 .feedback .description {
@@ -256,7 +260,7 @@ footer{
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
     html {
         font-size: 14px;
     }
@@ -282,7 +286,7 @@ footer{
       top: 10px;
     } */
 
-    .all_items{
+    .topnav.responsive .all_items{
         position: absolute;
         top: 87px;
         width: 100%;
@@ -302,6 +306,9 @@ footer{
         color: white;
     }
 
+    .topnav.responsive .item a:hover{
+        color:#ff6600;
+    }
 
 
     /* service_details */
