@@ -110,6 +110,7 @@ nav .icon{
 
 .service_container .description{
     text-align: center;
+    padding-top: 20px;
 }
 
 .service_container #btn1, #btn2, #btn3, #btn4{
