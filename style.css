@@ -2,8 +2,9 @@
     box-sizing: border-box;
 }
 
-body{
+body, figure, nav, section, article, figcaption {
     margin:0;
+    padding:0;
     font-family: sans-serif;
 }
 
@@ -70,12 +71,17 @@ nav .icon{
     margin: 5px;
 }
 
+.carousel-indicators li:hover{
+    background-color: white;
+}
+
+
 /* service_details */
 .service_details .title{
     font-size: 2rem;
     color:  #ff6600;
     text-align: center;
-    padding: 20px 0px;
+    padding: 1rem 0px;
 }
 
 .service_details .intro{
@@ -87,7 +93,7 @@ nav .icon{
 
 .service_container{
     max-width: 1000px;
-    margin: 20px auto;
+    margin: 0px auto;
     display: flex;
     padding: 20px;
     justify-content: space-between;
@@ -119,8 +125,6 @@ nav .icon{
     cursor: pointer;
 
     padding: 10px 20px;
-    font-size: 16px;
-
     margin: auto;
     display: block;
 }
@@ -140,7 +144,7 @@ nav .icon{
     font-size: 2rem;
     color:  #ff6600;
     text-align: center;
-    padding: 20px 0px;
+    padding: 10px 0px;
 }
 
 /* using grid - not done */
@@ -221,15 +225,16 @@ nav .icon{
     flex-wrap: wrap;
     max-width: 1200px;
     margin: auto;
+    margin-bottom: 1rem;
 }
 
 .testimonial{
-    padding: 20px;
+    padding: 10px;
     width: 70%;
 }
 
 .events_details{
-    padding: 20px 10px 60px 10px;
+    padding: 10px 10px 60px 10px;
     width: 30%;
 }
 
@@ -253,6 +258,9 @@ nav .icon{
 
 /* footer */
 footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color:  #ff6600;
     color: white;
     text-align: center;
@@ -349,6 +357,10 @@ footer{
 
 
     /* feedback */
+    .feedback{
+        margin-bottom: 4rem;
+    }
+
     .testimonial, .events_details{
         width: 100%;
         padding: 15px;

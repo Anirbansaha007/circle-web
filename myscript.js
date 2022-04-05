@@ -1,4 +1,4 @@
-function myFunction(dots, more, btn) {
+function expandOrShrink(dots, more, btn) {
   var dotsText = document.getElementById(dots);
   var moreText = document.getElementById(more);
   var btnText = document.getElementById(btn);
@@ -16,11 +16,11 @@ function myFunction(dots, more, btn) {
   }
 }
 
-function clickFunction(){
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
+function navButtonClick(){
+    var navbar = document.getElementById("myTopnav");
+    if (navbar.className === "topnav") {
+        navbar.className += " responsive";
     } else {
-        x.className = "topnav";
+        navbar.className = "topnav";
     }
 }
