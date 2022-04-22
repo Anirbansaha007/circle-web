@@ -93,7 +93,8 @@ nav .icon{
 }
 
 .carousel-inner{
-    max-height: 45vh;
+    max-height: 35rem;
+    /* max-height: 45vh; */
 }
 
 
