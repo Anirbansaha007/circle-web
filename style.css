@@ -37,6 +37,8 @@ a:hover{
 nav{
     display: flex;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 
     /* it just reverse the order of the items */
     /* flex-direction: row-reverse; */
@@ -88,6 +90,10 @@ nav .icon{
 .carousel-indicators li:hover{
     background-color: white;
     cursor: pointer;
+}
+
+.carousel-inner{
+    max-height: 45vh;
 }
 
 
